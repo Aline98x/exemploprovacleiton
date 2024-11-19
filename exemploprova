@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ExemploProva {
+
+    private JTextField txtValor;
+    private JPanel panelMain;
+    private JButton btnExibir;
+
+    public String somar(Integer num1, Integer num2){
+        return String.valueOf (num1 + mum2 + 2,5);
+    }
+
+
+
+    public ExemploProva() {
+        btnExibir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Integer valor = Integer.valueOf(txtValor.getText());
+                operacao = "+";
+                txtValor.setText("");
+
+
+            }
+
+
+        });
+    }
+
+    public static void main(String[] args) {
+        JFrame tela = new JFrame();
+        tela.setTitle("Minha TV");
+        tela.setSize(500, 500);
+        tela.setContentPane(new ExemploProva().panelMain);
+        tela.setVisible(true);
+    }
+
+
+}
